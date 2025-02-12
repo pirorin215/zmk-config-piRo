@@ -6,12 +6,12 @@
 
 &kscan0 {
         col-gpios
-            = <&xiao_d  6 GPIO_ACTIVE_HIGH>
-            , <&shifter 0 GPIO_ACTIVE_HIGH> 
-            , <&shifter 1 GPIO_ACTIVE_HIGH> 
+            = <&shifter 1 GPIO_ACTIVE_HIGH>
             , <&shifter 2 GPIO_ACTIVE_HIGH> 
-            , <&shifter 3 GPIO_ACTIVE_HIGH>
-            //, <&shifter 4 GPIO_ACTIVE_HIGH>
+            , <&shifter 3 GPIO_ACTIVE_HIGH> 
+            , <&shifter 4 GPIO_ACTIVE_HIGH> 
+            , <&shifter 5 GPIO_ACTIVE_HIGH>
+            , <&shifter 6 GPIO_ACTIVE_HIGH>
             ;
 };
 
