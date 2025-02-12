@@ -54,9 +54,7 @@
                                     &kp LEFT_WIN  &kp LEFT_ALT  &kp SPACE    &kp DEL  &lt 2 ENTER  &kp LEFT_ARROW  &kp UP_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW
             >;
 
-            sensor-bindings =
-                <&scroll_up_down>,
-                <&inc_dec_kp LC(K_SCROLL_UP) A>;
+            sensor-bindings = <&scroll_up_down>, <&scroll_up_down>;
         };
 
         layer_1 {
