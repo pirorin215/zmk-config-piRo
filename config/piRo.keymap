@@ -56,7 +56,7 @@
 
             sensor-bindings =
                 <&scroll_up_down>,
-                <&inc_dec_kp C_AC_SCROLL_UP C_AC_SCROLL_DOWN>;
+                <&inc_dec_kp LC(K_SCROLL_UP) A>;
         };
 
         layer_1 {
