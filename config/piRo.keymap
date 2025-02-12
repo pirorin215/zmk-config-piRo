@@ -70,10 +70,10 @@
 
         layer_2 {
             bindings = <
-&kp LANG_ZENKAKUHANKAKU  &kp EXCLAMATION  &kp DOUBLE_QUOTES  &kp DOLLAR    &kp DOLLAR    &kp PERCENT     &kp AMPERSAND  &kp SQT       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp EQUAL     &kp CARET
-&kp F2                   &kp F5           &kp F7             &kp F10       &kp F11       &kp F12         &kp BACKSPACE  &mkp LCLK     &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &mkp RCLK     &kp PIPE
-&none                    &kp NUMBER_1     &kp NUMBER_2       &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5    &kp NUMBER_6   &kp NUMBER_7  &kp NUMBER_8          &kp NUMBER_9           &kp NUMBER_0  &kp PRINTSCREEN
-                                                             &trans        &trans        &kp DELETE      &msc SCRL_UP   &trans        &trans                &trans                 &trans        &trans
+&kp LANG_ZENKAKUHANKAKU  &kp EXCLAMATION  &kp DOUBLE_QUOTES  &kp DOLLAR    &kp DOLLAR    &kp PERCENT     &kp AMPERSAND    &kp SQT       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp EQUAL     &kp CARET
+&kp F2                   &kp F5           &kp F7             &kp F10       &kp F11       &kp F12         &kp BACKSPACE    &mkp LCLK     &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &mkp RCLK     &kp PIPE
+&none                    &kp NUMBER_1     &kp NUMBER_2       &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5    &kp NUMBER_6     &kp NUMBER_7  &kp NUMBER_8          &kp NUMBER_9           &kp NUMBER_0  &kp PRINTSCREEN
+                                                             &trans        &trans        &kp DELETE      &mt EQUAL MINUS  &trans        &trans                &trans                 &trans        &trans
             >;
 
             sensor-bindings = <&scroll_up_down>;
