@@ -1,0 +1,8 @@
+file_format: "1"
+id: piRo
+name: piRo
+type: shield
+url: https://github.com/pirorin215/zmk-config-piRo
+requires: [seeeduino_xiao_ble]
+features:
+  - keys
