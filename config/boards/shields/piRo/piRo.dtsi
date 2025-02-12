@@ -35,7 +35,7 @@
         compatible = "alps,ec11";
         a-gpios = <&gpio0  9 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>; // NFC pad
         b-gpios = <&gpio0 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>; // NFC pad
-        steps = <24>;
+        steps = <12>;
         status = "disabled";
     };
 
@@ -43,7 +43,7 @@
         compatible = "alps,ec11";
         a-gpios = <&gpio0  9 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>; // NFC pad
         b-gpios = <&gpio0 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>; // NFC pad
-        steps = <24>;
+        steps = <12>;
         status = "disabled";
     };
 
