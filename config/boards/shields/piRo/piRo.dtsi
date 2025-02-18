@@ -42,8 +42,10 @@
 
     right_encoder: encoder_right {
         compatible = "alps,ec11";
-        a-gpios = <&gpio0  9 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>; // NFC pad
-        b-gpios = <&gpio0 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>; // NFC pad
+        //a-gpios = <&gpio0  9 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>; // NFC pad
+        //b-gpios = <&gpio0 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>; // NFC pad
+        a-gpios = <&xiao_d 5 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;   // NFC パッド破壊したので暫定
+        b-gpios = <&xiao_d 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;   // NFC パッド破壊したので暫定
         steps = <24>;
         status = "disabled";
     };
