@@ -11,6 +11,8 @@
             ;
 };
 
+&xiao_serial { status = "disabled"; };
+
 &left_encoder {
     status = "okay";
 };
