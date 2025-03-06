@@ -7,12 +7,12 @@
 
 ## 1. ローカルビルド
 
-### 1-1. 環境設定
+### 1-1. west環境
 
 ```
-cd /Users/yoshi/zmk/app
+cd ~/zmk/app
 git clone https://github.com/pirorin215/zmk-config-piRo.git
-cp zmk-config-piRo/config/west.yml /Users/yoshi/zmk/app/
+cp zmk-config-piRo/config/west.yml ~/zmk/app/
 west update
 
 sudo apt install ninja-build
@@ -25,7 +25,7 @@ source ~/zmk/.venv/bin/activate
 rm -rf build
 
 west build -d build/piRo_reset -p -b seeeduino_xiao_ble -- -DSHIELD="settings_reset"
-west build -d build/piRo_L     -p -b seeeduino_xiao_ble -- -DZMK_CONFIG="/Users/yoshi/zmk/app/zmk-config-piRo/config/" -DSHIELD="piRo_L"
-west build -d build/piRo_R     -p -b seeeduino_xiao_ble -- -DZMK_CONFIG="/Users/yoshi/zmk/app/zmk-config-piRo/config/" -DSHIELD="piRo_R"
+west build -d build/piRo_L     -p -b seeeduino_xiao_ble -- -DZMK_CONFIG="~/zmk/app/zmk-config-piRo/config/" -DSHIELD="piRo_L"
+west build -d build/piRo_R     -p -b seeeduino_xiao_ble -- -DZMK_CONFIG="~/zmk/app/zmk-config-piRo/config/" -DSHIELD="piRo_R"
 
 ```
