@@ -42,6 +42,9 @@ pip install --upgrade pip
 
 ### 1.3. west
 
+> [!IMPORTANT]
+> 独自のwest.ymlを利用したビルドを行う為に変更した手順
+ 
 ``` bash
 west init -l app
 west update
@@ -50,7 +53,7 @@ pip install -r ~/zmk/zephyr/scripts/requirements.txt
 ```
 
 > [!CAUTION]
-> 公式手順は独自のwest.ymlを利用したビルドが行いづらいです
+> 公式手順は独自のwest.ymlを利用したビルドが行いづらい
 
 <details>
 <summary>公式手順</summary>
