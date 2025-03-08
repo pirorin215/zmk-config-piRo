@@ -50,7 +50,7 @@ pip install -r ~/zmk/zephyr/scripts/requirements.txt
 ```
 
 [!CAUTION]公式手順は独自のwest.ymlでビルドしづらいです
-~~ 
+<del>
 ``` bash
 west init ~/zephyrproject 
 cd ~/zephyrproject
@@ -59,7 +59,7 @@ west update
 west zephyr-export
 pip install -r ~/zephyrproject/zephyr/scripts/requirements.txt
 ```
-~~ 
+</del>
 
 ### 1.4. zephyr-sdk
 ``` bash
