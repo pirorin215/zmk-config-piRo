@@ -25,7 +25,7 @@ source ~/zmk/.venv/bin/activate
 rm -rf build
 
 west build -d build/piRo_reset -p -b seeeduino_xiao_ble -- -DSHIELD="settings_reset"
-west build -d build/piRo_L     -p -b seeeduino_xiao_ble -- -DZMK_CONFIG="~/zmk/app/zmk-config-piRo/config/" -DSHIELD="piRo_L rgbled_adapter"
-west build -d build/piRo_R     -p -b seeeduino_xiao_ble -- -DZMK_CONFIG="~/zmk/app/zmk-config-piRo/config/" -DSHIELD="piRo_R rgbled_adapter"
+west build -d build/piRo_L     -p -b seeeduino_xiao_ble -- -DZMK_CONFIG="$HOME/zmk/app/zmk-config-piRo/config/" -DSHIELD="piRo_L rgbled_adapter"
+west build -d build/piRo_R     -p -b seeeduino_xiao_ble -- -DZMK_CONFIG="$HOME/zmk/app/zmk-config-piRo/config/" -DSHIELD="piRo_R rgbled_adapter"
 
 ```
