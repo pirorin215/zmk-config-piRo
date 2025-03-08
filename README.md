@@ -134,26 +134,26 @@ settings_resetのビルド時はその他の警告（WARNING)がたくさん出�
 
 ZMKで日本語配列のキーマップ作る情報が見当たらないでメモを作成
 
-| 記号 | 指定値 |
-|------|--------|
-| ! | &kp LS(NUMBER_1) |
-| " | &kp LS(NUMBER_2) |
-| # | &kp LS(NUMBER_3) |
-| $ | &kp LS(NUMBER_4) |
-| % | &kp LS(NUMBER_5) |
-| & | &kp LS(NUMBER_6) |
-| ' | &kp LS(NUMBER_7) |
-| ( | &kp LS(NUMBER_8) |
-| ) | &kp LS(NUMBER_9) |
-| -= | &kp MINUS |
-| ^~ | &kp EQUAL |
-| ¥\| | &kp INT3 |
-| @` | &kp LEFT_BRACKET |
-| [{ | &kp RIGHT_BRACKET |
-| ;+ | &kp SEMICOLON |
-| :* | &kp SINGLE_QUOTE |
-| ]} | &kp NON_US_HASH |
-| ,< | &kp COMMA |
-| .> | &kp DOT |
-| /? | &kp SLASH |
-| _ | &kp INT1 |
+| 標準 | シフト | 指定値 |
+|------|--------|--------|
+| ! | ! | &kp LS(NUMBER_1) |
+| " | " | &kp LS(NUMBER_2) |
+| # | # | &kp LS(NUMBER_3) |
+| $ | $ | &kp LS(NUMBER_4) |
+| % | % | &kp LS(NUMBER_5) |
+| & | & | &kp LS(NUMBER_6) |
+| ' | ' | &kp LS(NUMBER_7) |
+| ( | ( | &kp LS(NUMBER_8) |
+| ) | ) | &kp LS(NUMBER_9) |
+| - | = | &kp MINUS |
+| ^ | ~ | &kp EQUAL |
+| ¥ | \| | &kp INT3 |
+| @ | ` | &kp LEFT_BRACKET |
+| [ | { | &kp RIGHT_BRACKET |
+| ; | + | &kp SEMICOLON |
+| : | * | &kp SINGLE_QUOTE |
+| ] | } | &kp NON_US_HASH |
+| , | < | &kp COMMA |
+| . | > | &kp DOT |
+| / | ? | &kp SLASH |
+| _ | _ | &kp INT1 |
