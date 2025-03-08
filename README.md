@@ -9,6 +9,7 @@
     - [1.5. カスタムキーボードのリポジトリチェックアウト](#15-カスタムキーボードのリポジトリチェックアウト)
     - [1.6. ビルドスクリプト](#16-ビルドスクリプト)
   - [2. ビルド実行](#2-ビルド実行)
+  - [3. WARNING抑止](#3-WARNING抑止)
 
 ## 1. ローカルビルド環境構築
 
@@ -110,3 +111,21 @@ cksum build/*/*/*.uf2
 cd ~/zmk/app
 sh build.sh
 ```
+
+## 3. WARNING抑止
+
+~/zmk/app/CMakeLists.txtを編集
+
+編集前
+```
+zephyr_cc_option(-Wfatal-errors)
+```
+
+編集後
+```
+zephyr_cc_option(-Wfatal-errors -Wno-unused-function -Wno-maybe-uninitialized -Wno-excess-initializers)
+```
+
+上記を設定することで、piRo_LとpiRo_Rのビルド時に警告（WARNING)が表示されなくなる。
+
+settings_resetのビルド時はその他の警告（WARNING)がたくさん出るが抑止の仕方が分からなかった。
