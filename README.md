@@ -21,13 +21,13 @@ https://zmk.dev/docs/development/local-toolchain/setup/native
 独自キーボードのビルド環境を作る方法に手間取ったのでメモ(※MacOS用です)
 
 ### 1.1. ライブラリインストール
-```
+``` bash
 brew install cmake ninja gperf python3 ccache qemu dtc wget libmagic wget
 ```
 
 ### 1.2. zmkfirmware
 
-```
+``` bash
 cd ~/
 git clone https://github.com/zmkfirmware/zmk.git
 cd zmk
@@ -35,37 +35,34 @@ python3 -m venv ~/zmk/.venv
 source ~/zmk/.venv/bin/activate
 ```
 
-```
+``` bash
 pip install west
 pip install --upgrade pip
 ```
 
 ### 1.3. west
 
-```
+``` bash
 west init -l app
 west update
 west zephyr-export
 pip install -r ~/zmk/zephyr/scripts/requirements.txt
 ```
 
-<details>
-<summary>
 [!CAUTION]公式手順は独自のwest.ymlでビルドしづらいです
-</summary>
-
 ```
+~~ bash
 west init ~/zephyrproject 
 cd ~/zephyrproject
 west update
 
 west zephyr-export
 pip install -r ~/zephyrproject/zephyr/scripts/requirements.txt
+~~
 ```
-</details>
 
 ### 1.4. zephyr-sdk
-```
+``` bash
 cd ~
 wget https://github.com/zephyrproject-rtos/sdk-ng/releases/download/v0.16.3/zephyr-sdk-0.16.3_macos-x86_64.tar.xz
 wget -O - https://github.com/zephyrproject-rtos/sdk-ng/releases/download/v0.16.3/sha256.sum | shasum --check --ignore-missing
@@ -75,7 +72,7 @@ cd ~/zephyr-sdk-0.16.3/
 ```
 
 ### 1.5. カスタムキーボードのリポジトリチェックアウト
-```
+``` bash
 cd ~/zmk/app
 git clone https://github.com/pirorin215/zmk-config-piRo.git
 cp zmk-config-piRo/config/west.yml ~/zmk/app/
@@ -86,7 +83,7 @@ west update
 
 ~/zmk/app/build.sh
 
-```
+``` bash
 source ~/zmk/.venv/bin/activate
 rm -rf build
 
@@ -100,7 +97,7 @@ cksum build/*/*/*.uf2
 
 ## 2. ビルド実行
 
-```
+``` bash
 cd ~/zmk/app
 sh build.sh
 ```
