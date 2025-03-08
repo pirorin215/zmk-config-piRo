@@ -18,8 +18,7 @@ https://zmk.dev/docs/development/local-toolchain/setup/native
 
 ・このメモを作った理由
 
-独自キーボードのビルド環境を作る方法に手間取ったのでメモ
-※MacOS用です
+独自キーボードのビルド環境を作る方法に手間取ったのでメモ(※MacOS用です)
 
 ### 1.1. ライブラリインストール
 ```
