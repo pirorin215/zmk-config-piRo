@@ -49,7 +49,11 @@ west zephyr-export
 pip install -r ~/zmk/zephyr/scripts/requirements.txt
 ```
 
-正式マニュアルは↓だけど、これだと独自のwest.ymlでビルドしづらい
+<details>
+<summary>公式手順（非推奨）</summary>
+
+> [!CAUTION]
+> この方法は独自のwest.ymlでビルドしづらいため非推奨です
 
 ```
 west init ~/zephyrproject 
