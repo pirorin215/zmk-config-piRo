@@ -129,3 +129,31 @@ zephyr_cc_option(-Wfatal-errors -Wno-unused-function -Wno-maybe-uninitialized -W
 上記を設定することで、piRo_LとpiRo_Rのビルド時に警告（WARNING)が表示されなくなる。
 
 settings_resetのビルド時はその他の警告（WARNING)がたくさん出るが抑止の仕方が分からなかった。
+
+## 4. ZMK 日本語配列の主な記号の指定値メモ
+
+ZMKで日本語配列のキーマップ作る情報が見当たらないでメモを作成
+
+| 記号 | 指定値 |
+|------|--------|
+| ! | &kp LS(NUMBER_1) |
+| " | &kp LS(NUMBER_2) |
+| # | &kp LS(NUMBER_3) |
+| $ | &kp LS(NUMBER_4) |
+| % | &kp LS(NUMBER_5) |
+| & | &kp LS(NUMBER_6) |
+| ' | &kp LS(NUMBER_7) |
+| ( | &kp LS(NUMBER_8) |
+| ) | &kp LS(NUMBER_9) |
+| -= | &kp MINUS |
+| ^~ | &kp EQUAL |
+| ¥\| | &kp INT3 |
+| @` | &kp LEFT_BRACKET |
+| [{ | &kp RIGHT_BRACKET |
+| ;+ | &kp SEMICOLON |
+| :* | &kp SINGLE_QUOTE |
+| ]} | &kp NON_US_HASH |
+| ,< | &kp COMMA |
+| .> | &kp DOT |
+| /? | &kp SLASH |
+| _ | &kp INT1 |
