@@ -13,13 +13,13 @@
 
 ## 1. ローカルビルド環境構築
 
-・ZMK公式のNative Setup説明
-
+ZMK公式のNativeSetup説明<br/>
 https://zmk.dev/docs/development/local-toolchain/setup/native
 
-・このメモを作った理由
-
-独自キーボードのビルド環境を作る方法に手間取ったのでメモ
+<pre>
+ZMK公式のローカルビルド構築手順は上記URLですが、
+独自キーボードのビルド環境を作る方法に手間取ったのでメモを作りました。  
+</pre>
 
 > [!WARNING]
 > MacOS用
@@ -91,7 +91,7 @@ west update
 
 ### 1.6. ビルドスクリプト
 
-~/zmk/app/build.sh
+~/zmk/app/build.sh を新規作成
 
 ``` bash
 source ~/zmk/.venv/bin/activate
@@ -102,7 +102,6 @@ west build -d build/piRo_L     -p -b seeeduino_xiao_ble -- -DZMK_CONFIG="$HOME/z
 west build -d build/piRo_R     -p -b seeeduino_xiao_ble -- -DZMK_CONFIG="$HOME/zmk/app/zmk-config-piRo/config/" -DSHIELD="piRo_R rgbled_adapter"
 
 ls -l build/*/*/*.uf2
-cksum build/*/*/*.uf2
 ```
 
 ## 2. ビルド実行
