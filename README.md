@@ -42,7 +42,7 @@ pip install --upgrade pip
 
 ### 1.3. west
 
-> [!IMPORTANT]
+> [!NOTE]
 > 独自のwest.ymlを利用したビルドを行う為に変更した手順
  
 ``` bash
