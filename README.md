@@ -11,7 +11,8 @@
 
 ## 1. ローカルビルド
 
-・ローカルビルドの公式セットアップ説明
+・ZMK公式のNative Setup説明
+
 https://zmk.dev/docs/development/local-toolchain/setup/native
 
 ・このメモを作った理由
