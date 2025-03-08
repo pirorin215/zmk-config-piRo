@@ -61,8 +61,8 @@ cd ~/zephyrproject
 west update
 west zephyr-export
 pip install -r ~/zephyrproject/zephyr/scripts/requirements.txt
-</details>
 ```
+</details>
 
 ### 1.4. zephyr-sdk
 ``` bash
