@@ -23,8 +23,8 @@ ZMK公式のNativeSetup説明<br/>
 https://zmk.dev/docs/development/local-toolchain/setup/native
 
 <pre>
-ZMK公式のローカルビルド構築手順は上記URLですが、
-独自キーボードのビルド環境を作る方法に手間取ったのでメモを作りました。  
+ZMK公式のローカルビルド構築手順は上記URL。
+独自キーボードのビルド環境を作る方法に手間取ったのでメモを作成。  
 </pre>
 
 > [!WARNING]
