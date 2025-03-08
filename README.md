@@ -51,10 +51,12 @@ pip install -r ~/zmk/zephyr/scripts/requirements.txt
 
 [!CAUTION]公式手順は独自のwest.ymlでビルドしづらいです
 
-~~ west init ~/zephyrproject ~~
-
+~~ここが打消しされるよ~~
+~~west init ~/zephyrproject~~
 
 ``` bash
+~~ここが打消しされるよ~~
+
 ~~ west init ~/zephyrproject ~~ 
 ~~ cd ~/zephyrproject ~~ 
 ~~ west update ~~ 
