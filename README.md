@@ -53,7 +53,7 @@ pip install -r ~/zmk/zephyr/scripts/requirements.txt
 > 公式手順は独自のwest.ymlを利用したビルドが行いづらいです
 
 <details>
-<summary>~~公式手順（非推奨）~~</summary>
+<summary>公式手順</summary>
 
 ```bash
 west init ~/zephyrproject 
