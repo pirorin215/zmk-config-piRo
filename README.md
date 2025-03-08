@@ -172,7 +172,9 @@ ZMKで日本語配列のキーマップ作る情報が見当たらないでメ�
 
 ### 5.1. ビルドの引数変更
 
-**-DSNIPPET=zmk-usb-logging**を追加する
+ビルドコマンドに<br/>
+**-DSNIPPET=zmk-usb-logging** <br/>
+を追加する
 
 変更前
 ```
@@ -215,8 +217,7 @@ $
 ### 5.4. ログ出力
 
 > [!TIP]
-> 「Ctrl-t q」で終了<br/>
-> ※「Ctrl-t Ctrl-q」ではないので注意
+> 「Ctrl-t q」で終了
 ``` bash
 sudo tio /dev/tty.usbmodem12101
 ```
