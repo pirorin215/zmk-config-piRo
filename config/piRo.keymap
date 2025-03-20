@@ -10,7 +10,7 @@
 &mt {
     flavor = "balanced";
     quick-tap-ms = <0>;
-    retro-tap;
+    //retro-tap;
 };
 
 / {
@@ -74,7 +74,7 @@
 &kp LANG_ZENKAKUHANKAKU  &kp LS(NUMBER_1)  &kp LS(NUMBER_2)  &kp LS(NUMBER_3)  &kp LS(NUMBER_4)  &kp LS(NUMBER_5)    &kp LS(NUMBER_6)  &kp LS(NUMBER_7)  &kp LS(NUMBER_8)   &kp LS(NUMBER_9)  &kp MINUS     &kp EQUAL
 &kp F2                   &kp F5            &kp F7            &kp F10           &kp F11           &kp F12             &kp BACKSPACE     &mkp LCLK         &kp RIGHT_BRACKET  &kp NON_US_HASH   &mkp RCLK     &kp INT3
 &none                    &kp NUMBER_1      &kp NUMBER_2      &kp NUMBER_3      &kp NUMBER_4      &kp NUMBER_5        &kp NUMBER_6      &kp NUMBER_7      &kp NUMBER_8       &kp NUMBER_9      &kp NUMBER_0  &kp PRINTSCREEN
-                                           &trans            &trans            &trans            &kp DELETE          &trans            &trans            &trans             &trans            &trans        &trans
+                                           &trans            &kp LANG2         &kp LANG1         &kp DELETE          &trans            &trans            &trans             &trans            &trans        &trans
             >;
 
             sensor-bindings = <&scroll_up_down>;
