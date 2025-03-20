@@ -4,8 +4,6 @@ manifest:
       url-base: https://github.com/zmkfirmware
     - name: pirorin215
       url-base: https://github.com/pirorin215
-    - name: caksoylar
-      url-base: https://github.com/caksoylar  
   projects:
     - name: zmk
       remote: zmkfirmware
@@ -15,7 +13,7 @@ manifest:
       remote: pirorin215
       revision: main
     - name: zmk-rgbled-widget
-      remote: caksoylar
+      remote: pirorin215
       revision: main
   self:
     path: config
