@@ -281,7 +281,7 @@ void indicate_battery(void) {
 ```
 
 上記のzmk_battery_state_of_charge関数から取得されるバッテリーレベルを<br/>
-1.0V〜1.5Vに変更する必要があります。
+1.0V〜1.5Vに対応したレベル値の判定になるよう変更する必要があります。
 
 そこで
 ```
