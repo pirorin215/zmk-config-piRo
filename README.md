@@ -16,7 +16,7 @@
     - [5.2. confの変更](#52-confの変更)
     - [5.3. デバイスポイントの確認](#53-デバイスポイントの確認)
     - [5.4. ログ出力](#54-ログ出力)
-  - [6. xiao_bleを1.5V電池で駆動させる](#6-xiao_bleを1.5V電池で駆動させる)
+  - [6. 1.5V電池で駆動させる](#6-1.5V電池で駆動させる)
     - [6.1. 電池電源を接続する端子について](#61-電池電源を接続する端子について)
     - [6.2. zmk-rgbled-widgetによる電池残量監視について](#62-zmk-rgbled-widgetによる電池残量監視について)
 
@@ -255,7 +255,7 @@ $ sudo tio /dev/tty.usbmodem12101
 [00:05:05.478,576] <dbg> zmk: zmk_hid_mouse_movement_set: Mouse movement set to 0/0
 [00:05:05.486,450] <dbg> zmk: zmk_hid_mouse_movement_set: Mouse movement set to -2/0
 ```
-## 6. xiao_bleを1.5V電池で駆動させる
+## 6. 1.5V電池で駆動させる
 
 ### 6.1. 電池電源を接続する端子について
 
