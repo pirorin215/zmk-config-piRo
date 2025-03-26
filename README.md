@@ -252,3 +252,57 @@ $ sudo tio /dev/tty.usbmodem12101
 [00:05:05.478,576] <dbg> zmk: zmk_hid_mouse_movement_set: Mouse movement set to 0/0
 [00:05:05.486,450] <dbg> zmk: zmk_hid_mouse_movement_set: Mouse movement set to -2/0
 ```
+## 6. xiao bleを1.5V電池で駆動させる
+
+### 6.1. 電池電源を接続する端子について
+
+乾電池やニッケル水素充電池などを利用する場合、
+1.2Vや1.5Vを昇圧回路を通して接続すると思いますが、
+この際xiao ble背面の充電端子に接続しましょう。
+bat+ に接続しないとUSBからの給電時の判定になるのか、
+ZMKのスリープ処理が動作せず、電池消費が劇的に増えてしまいます。
+
+```
+/ {
+    vbatt: vbatt {
+        compatible = "zmk,battery-voltage-divider";
+        io-channels = <&adc 0>;
+        output-ohms = <10000>;
+        full-ohms   = <30000>;
+    };
+};
+```
+上記をデバイスツリーに追加し、xiao bleのA0(&adc 0)に電池電源の+端子をつなげることで、
+昇圧回路前の1.5Vを監視することができます。
+
+### 6.2. zmk-rgbled-widgetによる電池残量監視について
+
+xiao ble背面のbat+端子はリポバッテリーの3.7〜4.3Vくらいを対象としており、
+そのままでは電圧監視ができません（3.7V未満なので常に0%判定になります）。
+
+zmk-rgbled-widget/src/widget.c
+``` c++
+void indicate_battery(void) {
+    struct blink_item blink = {.duration_ms = CONFIG_RGBLED_WIDGET_BATTERY_BLINK_MS};
+    uint8_t battery_level = zmk_battery_state_of_charge();
+
+```
+
+上記のzmk_battery_state_of_charge関数から取得されるバッテリーレベルを
+1.0V〜1.5Vに変更する必要があります。
+
+```
+/ {
+    vbatt: vbatt {
+        compatible = "zmk,battery-voltage-divider";
+        io-channels = <&adc 0>;
+        output-ohms = <10000>;
+        full-ohms   = <30000>;
+    };
+};
+```
+上記のoutput-ohmsとfull-ohmsを上記の様に設定することで、
+3.7V〜4.3V＝0%〜100%の判定が1.0V〜1.5Vで0%〜100%の判定に変更されます。
+
+
+
