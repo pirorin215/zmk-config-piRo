@@ -259,21 +259,12 @@ $ sudo tio /dev/tty.usbmodem12101
 乾電池やニッケル水素充電池などを利用する場合、
 1.2Vや1.5Vを昇圧回路を通して接続すると思いますが、
 この際xiao ble背面の充電端子に接続しましょう。
-bat+ に接続しないとUSBからの給電時の判定になるのか、
-ZMKのスリープ処理が動作せず、電池消費が劇的に増えてしまいます。
 
-```
-/ {
-    vbatt: vbatt {
-        compatible = "zmk,battery-voltage-divider";
-        io-channels = <&adc 0>;
-        output-ohms = <10000>;
-        full-ohms   = <30000>;
-    };
-};
-```
-上記をデバイスツリーに追加し、xiao bleのA0(&adc 0)に電池電源の+端子をつなげることで、
-昇圧回路前の1.5Vを監視することができます。
+bat+ に接続せず5V端子に接続してもxiao bleは駆動できますが、
+その場合はUSBからの給電時の判定になりZMKのスリープ処理が動作せず、
+電池消費が劇的に増えてしまいます。
+
+※この事からxiao bleのキーボードをモバイルバッテリーUSB経由で駆動するのは微妙だと個人的に感じています。
 
 ### 6.2. zmk-rgbled-widgetによる電池残量監視について
 
@@ -291,6 +282,7 @@ void indicate_battery(void) {
 上記のzmk_battery_state_of_charge関数から取得されるバッテリーレベルを
 1.0V〜1.5Vに変更する必要があります。
 
+そこで
 ```
 / {
     vbatt: vbatt {
@@ -304,5 +296,5 @@ void indicate_battery(void) {
 上記のoutput-ohmsとfull-ohmsを上記の様に設定することで、
 3.7V〜4.3V＝0%〜100%の判定が1.0V〜1.5Vで0%〜100%の判定に変更されます。
 
-
+この設定値についてはcopilotなどのAIに聞いてたので詳しい計算根拠は知りません。
 
