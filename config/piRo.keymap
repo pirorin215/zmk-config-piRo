@@ -9,8 +9,6 @@
 &mt {
     flavor = "balanced";
     quick-tap-ms = <0>;
-
-    //retro-tap;
 };
 
 #define MOD_MORPH(name, modifiers, binding1, binding2) \
@@ -54,15 +52,6 @@
             bindings = <&mm_up_right>, <&mm_down_left>;
 
             tap-ms = <40>;
-        };
-
-        new_behavior: new_behavior {
-            compatible = "zmk,behavior-mod-morph";
-            label = "NEW_BEHAVIOR";
-            bindings = <&kp A>, <&kp B>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
         };
     };
 
