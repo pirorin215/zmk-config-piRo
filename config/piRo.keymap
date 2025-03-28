@@ -42,7 +42,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <80>;
         };
-       
+
         MOD_MORPH(mm_up,         MOD_LGUI, &msc SCRL_UP,   &kp UP_ARROW)
         MOD_MORPH(mm_down,       MOD_LGUI, &msc SCRL_DOWN, &kp DOWN_ARROW)
         MOD_MORPH(mm_up_right,   MOD_LALT, &mm_up,         &kp RIGHT_ARROW)
@@ -52,7 +52,17 @@
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
             bindings = <&mm_up_right>, <&mm_down_left>;
+
             tap-ms = <40>;
+        };
+
+        new_behavior: new_behavior {
+            compatible = "zmk,behavior-mod-morph";
+            label = "NEW_BEHAVIOR";
+            bindings = <&kp A>, <&kp B>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
         };
     };
 
@@ -66,6 +76,7 @@
 &mt LEFT_SHIFT MINUS  &kp Z  &kp X      &kp C         &kp V         &kp B        &kp N      &kp M        &kp COMMA       &kp DOT         &kp SLASH      &lt 2 INT1
                              &mkp LCLK  &kp LEFT_WIN  &kp LEFT_ALT  &kp SPACE    &mkp RCLK  &lt 2 ENTER  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW   &kp RIGHT_ARROW
             >;
+
             sensor-bindings = <&scroll_up_down>, <&scroll_up_down>;
         };
 
