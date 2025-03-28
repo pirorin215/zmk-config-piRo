@@ -13,6 +13,14 @@
     //retro-tap;
 };
 
+#define MOD_MORPH(name, modifiers, binding1, binding2) \
+    name: name { \
+        compatible = "zmk,behavior-mod-morph"; \
+        bindings = <binding1>, <binding2>; \
+        #binding-cells = <0>; \
+        mods = <(modifiers)>; \
+    };
+
 / {
     combos { compatible = "zmk,combos"; };
 
@@ -34,29 +42,17 @@
             #binding-cells = <2>;
             tapping-term-ms = <80>;
         };
+       
+        MOD_MORPH(mm_up,         MOD_LGUI, &msc SCRL_UP,   &kp UP_ARROW)
+        MOD_MORPH(mm_down,       MOD_LGUI, &msc SCRL_DOWN, &kp DOWN_ARROW)
+        MOD_MORPH(mm_up_right,   MOD_LALT, &mm_up,         &kp RIGHT_ARROW)
+        MOD_MORPH(mm_down_left,  MOD_LALT, &mm_down,       &kp LEFT_ARROW)
 
         scroll_up_down: behavior_sensor_rotate_mouse_wheel_up_down {
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
-            bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
-
+            bindings = <&mm_up_right>, <&mm_down_left>;
             tap-ms = <40>;
-        };
-
-        td_ctrl_esc: td_ctrl_esc {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD_CTRL_ESC";
-            #binding-cells = <0>;
-            bindings = <&kp LCTRL>, <&kp ESCAPE>;
-        };
-
-        mm_up: mm_up {
-            compatible = "zmk,behavior-mod-morph";
-            label = "MM_UP";
-            bindings = <&msc SCRL_UP>, <&kp UP_ARROW>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
         };
     };
 
@@ -66,11 +62,10 @@
         default_layer {
             bindings = <
 &lt 3 TAB             &kp Q  &kp W      &kp E         &kp R         &kp T        &kp Y      &kp U        &kp I           &kp O           &kp P          &kp LEFT_BRACKET
-&td_ctrl_esc          &kp A  &kp S      &kp D         &kp F         &kp G        &kp H      &kp J        &kp K           &kp L           &kp SEMICOLON  &kp SINGLE_QUOTE
+&mt LCTRL ESCAPE      &kp A  &kp S      &kp D         &kp F         &kp G        &kp H      &kp J        &kp K           &kp L           &kp SEMICOLON  &kp SINGLE_QUOTE
 &mt LEFT_SHIFT MINUS  &kp Z  &kp X      &kp C         &kp V         &kp B        &kp N      &kp M        &kp COMMA       &kp DOT         &kp SLASH      &lt 2 INT1
                              &mkp LCLK  &kp LEFT_WIN  &kp LEFT_ALT  &kp SPACE    &mkp RCLK  &lt 2 ENTER  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW   &kp RIGHT_ARROW
             >;
-
             sensor-bindings = <&scroll_up_down>, <&scroll_up_down>;
         };
 
