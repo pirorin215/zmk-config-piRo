@@ -51,7 +51,7 @@
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
             bindings = <&MM_A2>, <&MM_B2>;
-            tap-ms = <40>;
+            tap-ms = <20>;
         };
        
         // ALT+左右キーはマウスクリックのnext prevにする 
