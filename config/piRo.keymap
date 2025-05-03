@@ -41,20 +41,22 @@
             tapping-term-ms = <80>;
         };
 
-	// スクロールの方向をA系統とB系統に分けて、修飾キー毎に機能変更
+        // スクロールの方向をA系統とB系統に分けて、修飾キー毎に機能変更
+
         MOD_MORPH(MM_A1, MOD_LGUI, &msc SCRL_UP,   &kp C_VOL_UP) // ボリュームUP
         MOD_MORPH(MM_B1, MOD_LGUI, &msc SCRL_DOWN, &kp C_VOL_DN) // ボリュームDOWN
         MOD_MORPH(MM_A2, MOD_LALT, &MM_A1,         &mkp MB5)     // next click
         MOD_MORPH(MM_B2, MOD_LALT, &MM_B1,         &mkp MB4)     // prev click
-
         scroll_up_down: behavior_sensor_rotate_mouse_wheel_up_down {
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
             bindings = <&MM_A2>, <&MM_B2>;
+
             tap-ms = <20>;
         };
-       
+
         // ALT+左右キーはマウスクリックのnext prevにする 
+
         MOD_MORPH(MM_LEFT_ARROW,  MOD_LALT, &kp LEFT_ARROW,  &mkp MB4)     // prev click
         MOD_MORPH(MM_RIGHT_ARROW, MOD_LALT, &kp RIGHT_ARROW, &mkp MB5)     // next click
     };
@@ -70,7 +72,7 @@
                              &mkp LCLK  &kp LEFT_WIN  &kp LEFT_ALT  &kp SPACE    &mkp RCLK  &lt 2 ENTER  &MM_LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW   &MM_RIGHT_ARROW
             >;
 
-            sensor-bindings = <&scroll_up_down> ,<&scroll_up_down>;
+            sensor-bindings = <&scroll_up_down>, <&scroll_up_down>;
         };
 
         layer_1 {
@@ -130,13 +132,13 @@
 
         MOUSE {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans    &trans    &trans    &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &mkp MB1  &mkp MB2  &mkp MB3  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans    &trans    &trans    &trans  &trans
-                &trans  &trans  &trans  &trans    &trans  &trans    &trans    &trans    &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans    &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &mkp MB1  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans    &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &trans    &trans  &trans    &trans  &trans  &trans  &trans
             >;
 
-            sensor-bindings = <&scroll_up_down>;
+            sensor-bindings = <&scroll_up_down>, <&scroll_up_down>;
         };
     };
 };
