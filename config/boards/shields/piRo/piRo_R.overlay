@@ -85,7 +85,7 @@
 
         irq-gpios = <&gpio0 16 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>; // P0.16 表面パッド
         scroll-layers = <3>;
-        automouse-layer = <6>;
+        //automouse-layer = <6>;
         snipe-layers = <2>;
     };
 };
