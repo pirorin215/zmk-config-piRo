@@ -47,6 +47,16 @@
             bindings = <&mkp MB1>;
             key-positions = <19 20>;
         };
+
+        pageup {
+            bindings = <&kp PG_UP>;
+            key-positions = <11 23>;
+        };
+
+        pagedown {
+            bindings = <&kp PAGE_DOWN>;
+            key-positions = <35 23>;
+        };
     };
 
     macros {
