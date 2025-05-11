@@ -20,7 +20,29 @@
     };
 
 / {
-    combos { compatible = "zmk,combos"; };
+    combos {
+        compatible = "zmk,combos";
+
+        delete {
+            bindings = <&kp DELETE>;
+            key-positions = <8 9>;
+        };
+
+        rclick {
+            bindings = <&mkp RCLK>;
+            key-positions = <20 21>;
+        };
+
+        prevclick {
+            bindings = <&mkp MB4>;
+            key-positions = <31 32>;
+        };
+
+        nextclick {
+            bindings = <&mkp MB5>;
+            key-positions = <32 33>;
+        };
+    };
 
     macros {
         to_layer_0: to_layer_0 {
