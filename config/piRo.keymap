@@ -57,6 +57,21 @@
             bindings = <&kp PAGE_DOWN>;
             key-positions = <35 23>;
         };
+
+        ctrl+w {
+            bindings = <&kp RC(W)>;
+            key-positions = <23 9>;
+        };
+
+        ctrl+r {
+            bindings = <&kp RC(R)>;
+            key-positions = <23 7>;
+        };
+
+        ctrl+t {
+            bindings = <&kp RC(T)>;
+            key-positions = <23 6>;
+        };
     };
 
     macros {
