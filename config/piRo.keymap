@@ -72,6 +72,11 @@
             bindings = <&kp RC(T)>;
             key-positions = <23 6>;
         };
+
+        F2combo {
+            bindings = <&kp F2>;
+            key-positions = <2 3>;
+        };
     };
 
     macros {
