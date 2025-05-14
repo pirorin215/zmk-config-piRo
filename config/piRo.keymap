@@ -22,10 +22,20 @@
 / {
     combos {
         compatible = "zmk,combos";
+        
+        backspace {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <7 8>;
+        };
 
         delete {
             bindings = <&kp DELETE>;
             key-positions = <8 9>;
+        };
+
+        click {
+            bindings = <&mkp MB1>;
+            key-positions = <19 20>;
         };
 
         rclick {
@@ -41,11 +51,6 @@
         nextclick {
             bindings = <&mkp MB5>;
             key-positions = <32 33>;
-        };
-
-        click {
-            bindings = <&mkp MB1>;
-            key-positions = <19 20>;
         };
 
         pageup {
