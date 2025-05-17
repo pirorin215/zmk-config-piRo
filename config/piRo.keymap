@@ -22,10 +22,12 @@
 / {
     combos {
         compatible = "zmk,combos";
-        
+
         backspace {
             bindings = <&kp BACKSPACE>;
             key-positions = <7 8>;
+            timeout-ms = <10>;
+            require-prior-idle-ms = <50>;
         };
 
         delete {
