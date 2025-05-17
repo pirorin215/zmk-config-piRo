@@ -11,6 +11,8 @@
     quick-tap-ms = <0>;
 };
 
+#define COMBO_TIMEOUT 20
+
 #define MOD_MORPH(name, modifiers, binding1, binding2) \
     name: name { \
         compatible = "zmk,behavior-mod-morph"; \
@@ -26,63 +28,73 @@
         backspace {
             bindings = <&kp BACKSPACE>;
             key-positions = <7 8>;
-            timeout-ms = <10>;
-            require-prior-idle-ms = <50>;
+            timeout-ms = <COMBO_TIMEOUT>;
         };
 
         delete {
             bindings = <&kp DELETE>;
             key-positions = <8 9>;
+            timeout-ms = <COMBO_TIMEOUT>;
         };
 
         click {
             bindings = <&mkp MB1>;
             key-positions = <19 20>;
+            timeout-ms = <COMBO_TIMEOUT>;
         };
 
         rclick {
             bindings = <&mkp RCLK>;
             key-positions = <20 21>;
+            timeout-ms = <COMBO_TIMEOUT>;
         };
 
         prevclick {
             bindings = <&mkp MB4>;
             key-positions = <31 32>;
+            timeout-ms = <COMBO_TIMEOUT>;
         };
 
         nextclick {
             bindings = <&mkp MB5>;
             key-positions = <32 33>;
+            timeout-ms = <COMBO_TIMEOUT>;
         };
 
         pageup {
             bindings = <&kp PG_UP>;
             key-positions = <11 23>;
+            timeout-ms = <COMBO_TIMEOUT>;
         };
 
         pagedown {
             bindings = <&kp PAGE_DOWN>;
             key-positions = <35 23>;
+            timeout-ms = <COMBO_TIMEOUT>;
         };
 
         ctrl+w {
             bindings = <&kp RC(W)>;
             key-positions = <23 9>;
+            timeout-ms = <COMBO_TIMEOUT>;
         };
 
         ctrl+r {
             bindings = <&kp RC(R)>;
             key-positions = <23 7>;
+            timeout-ms = <COMBO_TIMEOUT>;
         };
 
         ctrl+t {
             bindings = <&kp RC(T)>;
             key-positions = <23 6>;
+            timeout-ms = <COMBO_TIMEOUT>;
         };
 
         F2combo {
             bindings = <&kp F2>;
             key-positions = <2 3>;
+            timeout-ms = <COMBO_TIMEOUT>;
         };
     };
 
