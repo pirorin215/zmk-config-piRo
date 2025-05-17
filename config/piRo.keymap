@@ -29,6 +29,7 @@
             bindings = <&kp BACKSPACE>;
             key-positions = <7 8>;
             timeout-ms = <COMBO_TIMEOUT>;
+            require-prior-idle-ms = <50>;
         };
 
         delete {
