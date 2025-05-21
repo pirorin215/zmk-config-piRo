@@ -7,8 +7,9 @@
 #define MOUSE 6
 
 &mt {
-    flavor = "balanced";
-    quick-tap-ms = <200>;
+    flavor = "tap-preferred";
+    quick-tap-ms = <125>;
+    bindings = <&none>, <&none>;
 };
 
 #define COMBO_TIMEOUT 20
