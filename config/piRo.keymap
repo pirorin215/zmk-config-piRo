@@ -5,13 +5,6 @@
 
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 100
 #define MOUSE 6
-
-&mt {
-    flavor = "tap-preferred";
-    quick-tap-ms = <125>;
-    bindings = <&none>, <&none>;
-};
-
 #define COMBO_TIMEOUT 20
 
 #define MOD_MORPH(name, modifiers, binding1, binding2) \
@@ -131,6 +124,17 @@
             bindings = <&MM_A2>, <&MM_B2>;
 
             tap-ms = <20>;
+        };
+
+        mt: mt {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MT";
+            bindings = <&none>, <&none>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <125>;
+            flavor = "tap-preferred";
         };
 
         // ALT+左右キーはマウスクリックのnext prevにする 
