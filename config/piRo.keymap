@@ -115,6 +115,7 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <80>;
+            quick-tap-ms = <200>;
         };
 
         // スクロールの方向をA系統とB系統に分けて、修飾キー毎に機能変更
