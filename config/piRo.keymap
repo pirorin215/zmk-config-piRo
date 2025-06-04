@@ -137,10 +137,9 @@
         MOD_MORPH(MM_A2, MOD_LALT, &MM_A1,         &mkp MB5)     // next click
         MOD_MORPH(MM_B2, MOD_LALT, &MM_B1,         &mkp MB4)     // prev click
         scroll_up_down: behavior_sensor_rotate_mouse_wheel_up_down {
-            compatible = "zmk,behavior-sensor-rotate";
-            #sensor-binding-cells = <0>;
-            bindings = <&MM_A2>, <&MM_B2>;
-
+            compatible = "zmk,behavior-sensor-rotate-var";
+            #sensor-binding-cells = <2>;
+            bindings = <&msc>, <&msc>;
             tap-ms = <20>;
         };
 
@@ -161,7 +160,7 @@
                              &mkp LCLK  &kp LEFT_WIN  &kp LEFT_ALT  &kp SPACE    &mkp RCLK  &lt 2 ENTER  &MM_LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW   &MM_RIGHT_ARROW
             >;
 
-            sensor-bindings = <&scroll_up_down>, <&scroll_up_down>;
+            sensor-bindings = <&scroll_up_down SCRL_DOWN SCRL_UP>;
         };
 
         layer_1 {
