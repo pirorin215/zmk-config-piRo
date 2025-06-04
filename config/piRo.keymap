@@ -171,7 +171,7 @@
                 &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &kp F12
             >;
 
-            sensor-bindings = <&scroll_up_down>;
+            sensor-bindings = <&mouse_scrl SCRL_DOWN SCRL_UP>;
         };
 
         layer_2 {
@@ -182,7 +182,7 @@
                                            &trans            &kp LANG2         &kp LANG1         &kp DELETE          &trans            &trans            &trans             &trans            &trans        &trans
             >;
 
-            sensor-bindings = <&scroll_up_down>;
+            sensor-bindings = <&mouse_scrl SCRL_DOWN SCRL_UP>;
         };
 
         layer_3 {
@@ -193,7 +193,7 @@
                 &trans  &trans  &trans  &trans         &trans       &trans        &trans        &trans        &trans        &bt BT_CLR_ALL
             >;
 
-            sensor-bindings = <&scroll_up_down>;
+            sensor-bindings = <&mouse_scrl SCRL_DOWN SCRL_UP>;
         };
 
         layer_4 {
@@ -204,7 +204,7 @@
                 &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
             >;
 
-            sensor-bindings = <&scroll_up_down>;
+            sensor-bindings = <&mouse_scrl SCRL_DOWN SCRL_UP>;
         };
 
         layer_5 {
@@ -215,7 +215,7 @@
                 &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
             >;
 
-            sensor-bindings = <&scroll_up_down>;
+            sensor-bindings = <&mouse_scrl SCRL_DOWN SCRL_UP>;
         };
 
         MOUSE {
@@ -226,7 +226,7 @@
                 &trans  &trans  &trans  &trans    &trans  &trans    &trans  &trans  &trans  &kp PAGE_DOWN
             >;
 
-            sensor-bindings = <&scroll_up_down>, <&scroll_up_down>;
+            sensor-bindings = <&mouse_scrl SCRL_DOWN SCRL_UP>;
         };
     };
 };
