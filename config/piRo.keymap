@@ -23,6 +23,25 @@
     acceleration-exponent = <0>;
 };
 
+/ {
+    input_processors {
+        zip_wheel_scaler: zip_wheel_scaler {
+            compatible = "zmk,input-processor-scaler";
+            #input-processor-cells = <2>;
+            type = <INPUT_EV_REL>;
+            codes = <INPUT_REL_WHEEL>;
+            track-remainders;
+        };
+    };
+};
+
+&msc_input_listener {
+    speed_up {
+        layers = <FUNCTION>;
+        input-processors = <&zip_wheel_scaler 3 1>; //スクロールを3倍速にする
+    };
+};
+
 #define COMBO_TIMEOUT 20
 
 #define MOD_MORPH(name, modifiers, binding1, binding2) \
@@ -136,10 +155,12 @@
         MOD_MORPH(MM_B1, MOD_LGUI, &msc SCRL_DOWN, &kp C_VOL_DN) // ボリュームDOWN
         MOD_MORPH(MM_A2, MOD_LALT, &MM_A1,         &mkp MB5)     // next click
         MOD_MORPH(MM_B2, MOD_LALT, &MM_B1,         &mkp MB4)     // prev click
+
         mouse_scrl: mouse_wheel_scrl {
             compatible = "zmk,behavior-sensor-rotate-var";
             #sensor-binding-cells = <2>;
             bindings = <&msc>, <&msc>;
+
             tap-ms = <20>;
         };
 
