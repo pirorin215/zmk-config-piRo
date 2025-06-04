@@ -194,7 +194,7 @@
                 &trans  &trans  &trans  &trans         &trans       &trans        &trans        &trans        &trans        &bt BT_CLR_ALL
             >;
 
-            sensor-bindings = <&re_kp C_VOLUME_UP C_VOLUME_DOWN>, <&re_kp C_VOLUME_UP C_VOLUME_DOWN>;
+            sensor-bindings = <&re_kp C_VOLUME_DOWN C_VOLUME_UP>, <&re_kp C_VOLUME_DOWN C_VOLUME_UP>;
         };
 
         layer_4 {
