@@ -141,29 +141,25 @@
             compatible = "zmk,behavior-hold-tap";
             label = "LAYER_TAP_TO_0";
             bindings = <&mo>, <&to_layer_0>;
-
             #binding-cells = <2>;
             tapping-term-ms = <80>;
             quick-tap-ms = <200>;
         };
 
         // スクロールの方向をA系統とB系統に分けて、修飾キー毎に機能変更
-
         MOD_MORPH(MM_A1, MOD_LGUI, &msc SCRL_UP,   &kp C_VOL_UP) // ボリュームUP
         MOD_MORPH(MM_B1, MOD_LGUI, &msc SCRL_DOWN, &kp C_VOL_DN) // ボリュームDOWN
         MOD_MORPH(MM_A2, MOD_LALT, &MM_A1,         &mkp MB5)     // next click
         MOD_MORPH(MM_B2, MOD_LALT, &MM_B1,         &mkp MB4)     // prev click
 
-        mouse_scrl: mouse_wheel_scrl {
+        accelerated_msc: accelerated_mouse_scroll {
             compatible = "zmk,behavior-sensor-rotate-var";
             #sensor-binding-cells = <2>;
             bindings = <&msc>, <&msc>;
-
             tap-ms = <20>;
         };
 
-        // ALT+左右キーはマウスクリックのnext prevにする 
-
+        // ALT+左右キーはマウスクリックのnext prevにする
         MOD_MORPH(MM_LEFT_ARROW,  MOD_LALT, &kp LEFT_ARROW,  &mkp MB4)     // prev click
         MOD_MORPH(MM_RIGHT_ARROW, MOD_LALT, &kp RIGHT_ARROW, &mkp MB5)     // next click
     };
@@ -179,7 +175,7 @@
                              &mkp LCLK  &kp LEFT_WIN  &kp LEFT_ALT  &kp SPACE    &mkp RCLK  &lt 2 ENTER  &MM_LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW   &MM_RIGHT_ARROW
             >;
 
-            sensor-bindings = <&mouse_scrl SCRL_DOWN SCRL_UP>;
+            sensor-bindings = <&accelerated_msc SCRL_DOWN SCRL_UP>;
         };
 
         layer_1 {
@@ -189,8 +185,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &kp F11
                 &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &kp F12
             >;
-
-            sensor-bindings = <&mouse_scrl SCRL_DOWN SCRL_UP>;
+            sensor-bindings = <&accelerated_msc SCRL_DOWN SCRL_UP>;
         };
 
         layer_2 {
@@ -200,8 +195,7 @@
 &none                    &kp NUMBER_1      &kp NUMBER_2      &kp NUMBER_3      &kp NUMBER_4      &kp NUMBER_5        &kp NUMBER_6      &kp NUMBER_7      &kp NUMBER_8       &kp NUMBER_9      &kp NUMBER_0  &kp PRINTSCREEN
                                            &trans            &kp LANG2         &kp LANG1         &kp DELETE          &trans            &trans            &trans             &trans            &trans        &trans
             >;
-
-            sensor-bindings = <&mouse_scrl SCRL_DOWN SCRL_UP>;
+            sensor-bindings = <&accelerated_msc SCRL_DOWN SCRL_UP>;
         };
 
         layer_3 {
@@ -211,8 +205,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans         &trans       &trans        &trans        &trans        &trans        &bt BT_CLR
                 &trans  &trans  &trans  &trans         &trans       &trans        &trans        &trans        &trans        &bt BT_CLR_ALL
             >;
-
-            sensor-bindings = <&mouse_scrl SCRL_DOWN SCRL_UP>;
+            sensor-bindings = <&accelerated_msc SCRL_DOWN SCRL_UP>;
         };
 
         layer_4 {
@@ -222,8 +215,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
                 &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
             >;
-
-            sensor-bindings = <&mouse_scrl SCRL_DOWN SCRL_UP>;
+            sensor-bindings = <&accelerated_msc SCRL_DOWN SCRL_UP>;
         };
 
         layer_5 {
@@ -233,8 +225,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
                 &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
             >;
-
-            sensor-bindings = <&mouse_scrl SCRL_DOWN SCRL_UP>;
+            sensor-bindings = <&accelerated_msc SCRL_DOWN SCRL_UP>;
         };
 
         MOUSE {
@@ -244,8 +235,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans    &trans  &trans  &trans  &kp PG_UP
                 &trans  &trans  &trans  &trans    &trans  &trans    &trans  &trans  &trans  &kp PAGE_DOWN
             >;
-
-            sensor-bindings = <&mouse_scrl SCRL_DOWN SCRL_UP>;
+            sensor-bindings = <&accelerated_msc SCRL_DOWN SCRL_UP>;
         };
     };
 };
