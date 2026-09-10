@@ -78,7 +78,10 @@
     cs-gpios = <&gpio0 3 GPIO_ACTIVE_LOW>;  // P0.03 D1
 
     trackball: trackball@0 {
-        compatible = "pixart,pmw3610";
+        /* 2026-09-10: モジュールを mochukeeb/zmk-pmw3610-driver 系へ更新に伴い
+         * compatible を zmk,pmw3610 へ（pixart,pmw3610 は Zephyr 4.1 公式
+         * バインディングと衝突するため新モジュールが改名） */
+        compatible = "zmk,pmw3610";
         status = "okay";
         reg = <0>;
         spi-max-frequency = <2000000>;
