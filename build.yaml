@@ -6,10 +6,14 @@
 # distinguish build outputs from each other:
 #
 ---
+# 2026-09-10: ZMK が Zephyr 4.1 移行で seeeduino_xiao_ble に /zmk バリアントを
+# 導入——素名のままだと CMake "Missing ZMK Compat" でビルド落ちするように
+# なったため修正（8/28 のビルド失敗も同根）。
+# 参考: https://zmk.dev/blog/2025/12/09/zephyr-4-1#zmk-board-variant
 include:
-  - board: seeeduino_xiao_ble
+  - board: seeeduino_xiao_ble/zmk
     shield: piRo_R rgbled_adapter
-  - board: seeeduino_xiao_ble
+  - board: seeeduino_xiao_ble/zmk
     shield: piRo_L rgbled_adapter
-  - board: seeeduino_xiao_ble
+  - board: seeeduino_xiao_ble/zmk
     shield: settings_reset
