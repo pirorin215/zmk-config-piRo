@@ -6,14 +6,15 @@
 # distinguish build outputs from each other:
 #
 ---
-# 2026-09-10: ZMK が Zephyr 4.1 移行で seeeduino_xiao_ble に /zmk バリアントを
-# 導入——素名のままだと CMake "Missing ZMK Compat" でビルド落ちするように
-# なったため修正（8/28 のビルド失敗も同根）。
+# 2026-09-10: ZMK が Zephyr 4.1 移行でボード命名を HWSIG 化——旧 seeeduino_xiao_ble
+# は seeed/xiao_ble の /zmk バリアントが正解（app/boards/seeed/xiao_ble/board.yml
+# で確認）。素名のままだと CMake "Missing ZMK Compat"/"Invalid BOARD" で落ちる
+# （8/28 のビルド失敗も同根）。
 # 参考: https://zmk.dev/blog/2025/12/09/zephyr-4-1#zmk-board-variant
 include:
-  - board: seeeduino_xiao_ble/zmk
+  - board: seeed/xiao_ble/zmk
     shield: piRo_R rgbled_adapter
-  - board: seeeduino_xiao_ble/zmk
+  - board: seeed/xiao_ble/zmk
     shield: piRo_L rgbled_adapter
-  - board: seeeduino_xiao_ble/zmk
+  - board: seeed/xiao_ble/zmk
     shield: settings_reset
